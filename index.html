@@ -1,85 +1,82 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
   <meta charset="utf-8">
-  <title>#2B3D4F</title>
+  <title>Welcome to my website!</title>
   <style>
-    /* Add your style here */
+    /* Add some style to make the website look nice */
     body {
-      font-family: Arial, sans-serif;
+      font-family: sans-serif;
+      background-color: #D4C2B0;
       margin: 0;
       padding: 0;
     }
-
-    .header {
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    header {
       background-color: #2B3D4F;
       color: white;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem;
+      padding: 10px 20px;
     }
-
-    .header h1 {
-      margin: 0;
-    }
-
-    .header a {
+    header a {
       color: white;
       text-decoration: none;
     }
-
-    .nav {
-      display: flex;
-      list-style: none;
-      margin: 0;
-      padding: 0;
+    header a:hover {
+      color: #D4C2B0;
     }
-
-    .nav li {
-      margin: 0 0.5rem;
+    main {
+      padding: 20px;
     }
-
-    .nav a {
-      color: white;
-      text-decoration: none;
-    }
-
-    .nav a:hover {
-      text-decoration: underline;
-    }
-
-    .main {
-      max-width: 60rem;
-      margin: 0 auto;
-      padding: 1rem;
-    }
-
-    .footer {
+    footer {
       background-color: #2B3D4F;
       color: white;
-      font-size: 0.8rem;
-      text-align: center;
-      padding: 1rem;
+      font-size: 0.8em;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: #D4C2B0;
+    }
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
 <body>
-  <header class="header">
-    <h1>#2B3D4F</h1>
-    <nav>
-      <ul class="nav">
-        <li><a href="#">About</a></li>
-        <li><a href="#">Service</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main class="main">
-    <!-- Add your content here -->
-  </main>
-  <footer class="footer">
-    &copy; 2023 #2B3D4F
-  </footer>
+  <div class="container">
+    <header>
+      <h1>#2B3D4F</h1>
+      <nav>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <h2>Welcome to my website!</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </main>
+    <footer>
+      <p>Copyright &copy; 2022</p>
+      <div>
+        <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>
+        <a href="https://youtube.com"><i class="fa fa-youtube"></i></a>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
