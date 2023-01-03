@@ -2,76 +2,110 @@
 
 /* 要素全体に適用されるスタイル */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-/* ボディのスタイル */
-body {
-  font-family: sans-serif;
-  background-color: #D4C2B0;
-  color: #2B3D4F;
-}
+  /* ボディのスタイル */
+  body {
+    font-family: sans-serif;
+    background-color: #D4C2B0;
+    color: #2B3D4F;
+  }
 
-/* ヘッダーのスタイル */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background-color: #2B3D4F;
-  color: white;
-}
+  /* ヘッダーのスタイル */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #2B3D4F;
+    color: white;
+  }
 
-/* サイト名のスタイル */
-header h1 {
-  margin: 0;
-  font-size: 1.5rem;
-}
+  /* サイト名のスタイル */
+  header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
 
-/* グローバルナビゲーションのスタイル */
-header nav {
-  display: flex;
-}
-
-/* ナビゲーションリンクのスタイル */
-header nav a {
-  display: block;
-  padding: 1rem;
-  color: white;
-  text-decoration: none;
-}
-
-/* フッターのスタイル */
-footer {
-  padding: 1rem;
-  background-color: #2B3D4F;
-  color: white;
-}
-
-/* コピーライトのスタイル */
-footer p {
-  margin: 0;
-  font-size: 0.75rem;
-}
-
-/* アイコンのスタイル */
-footer i {
-  margin-right: 0.5rem;
-}
-
-/* 本文のスタイル */
-main {
-  padding: 1rem;
-}
-
-/* レスポンシブデザインのためのスタイル */
-@media (max-width: 600px) {
+  /* グローバルナビゲーションのスタイル */
   header nav {
-    flex-direction: column;
+    display: flex;
   }
+
+  /* ナビゲーションリンクのスタイル */
   header nav a {
-    padding: 0.5rem;
+    display: block;
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
   }
-}
+
+  /* フッターのスタイル */
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: #2B3D4F;
+    color: white;
+  }
+
+  /* コピーライトのスタイル */
+  footer p {
+    margin: 0;
+    font-size: 0.75rem;
+  }
+
+  /* SNSアイコンのスタイル */
+
+  footer div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+
+  footer a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: #D4C2B0;
+    color: #2B3D4F;
+    text-decoration: none;
+    margin-right: 0.5rem;
+  }
+
+  footer a i {
+    font-size: 1.5rem;
+  }
+
+  /* コピーライトとアイコンの間隔のスタイル */
+footer p + a {
+    margin-left: 1rem;
+  }
+
+  /* 本文のスタイル */
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  /* レスポンシブデザインのためのスタイル */
+  @media (max-width: 800px) {
+    main {
+        width: 90%;
+    }
+    header nav {
+      flex-direction: column;
+    }
+    header nav a {
+      padding: 0.5rem;
+    }
+  }
