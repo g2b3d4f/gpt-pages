@@ -1,2 +1,3 @@
-# gpt-pages
-Website created using ChatGPT.
+Site created using ChatGPT.
+
+Some manual modifications have been made.
