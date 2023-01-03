@@ -1,5 +1,19 @@
 /* スタイルシート */
 
+:root {
+    --color-primary: #2B3D4F;
+    --color-secondary: #D4C2B0;
+    --color-white: white;
+  }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #BFAB98;
+    --color-secondary: #16222E;
+    --color-white: black;
+  }
+}
+
 /* 要素全体に適用されるスタイル */
 * {
     margin: 0;
@@ -11,8 +25,8 @@
   /* ボディのスタイル */
   body {
     font-family: sans-serif;
-    background-color: #D4C2B0;
-    color: #2B3D4F;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
   }
 
 
@@ -22,8 +36,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: #2B3D4F;
-    color: white;
+    background-color: var(--color-primary);
+    color: var(--color-white);
   }
 
   /* サイト名のスタイル */
@@ -41,7 +55,7 @@
   header nav a {
     display: block;
     padding: 1rem;
-    color: white;
+    color: var(--color-white);
     text-decoration: none;
   }
 
@@ -51,8 +65,8 @@
     flex-direction: column;
     align-items: center;
     padding: 1rem;
-    background-color: #2B3D4F;
-    color: white;
+    background-color: var(--color-primary);
+    color: var(--color-white);
   }
 
   /* コピーライトのスタイル */
@@ -77,8 +91,8 @@
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
-    background-color: #D4C2B0;
-    color: #2B3D4F;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
     text-decoration: none;
     margin: 0.5rem;
   }
@@ -101,7 +115,7 @@ footer p + a {
   }
 
   blockquote {
-    border-left: 0.5rem solid #2B3D4F;
+    border-left: 0.5rem solid var(--color-primary);
     padding: 0.5rem 1rem;
     margin: 1rem 0;
     font-style: italic;
@@ -116,11 +130,11 @@ footer p + a {
   }
 
   blockquote cite a:visited {
-    color: #2B3D4F;
+    color: var(--color-primary);
   }
 
   figure {
-    border: 0.5rem solid #2B3D4F;
+    border: 0.5rem solid var(--color-primary);
     margin: 1rem 0;
   }
 
@@ -131,7 +145,7 @@ footer p + a {
   }
 
   figure figcaption {
-    color: #2B3D4F;
+    color: var(--color-primary);
     text-align: center;
     padding: 1rem;
   }
@@ -144,13 +158,13 @@ footer p + a {
   }
 
   figure figcaption cite a:visited{
-    color: #2B3D4F;
+    color: var(--color-primary);
   }
 
   /* レスポンシブデザインのためのスタイル */
   @media (max-width: 800px) {
     main {
-        width: 90%;
+        width: 95%;
     }
     header nav {
       flex-direction: column;
