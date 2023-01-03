@@ -7,12 +7,14 @@
     box-sizing: border-box;
   }
 
+
   /* ボディのスタイル */
   body {
     font-family: sans-serif;
     background-color: #D4C2B0;
     color: #2B3D4F;
   }
+
 
   /* ヘッダーのスタイル */
   header {
@@ -68,7 +70,7 @@
   }
 
 
-  footer a {
+  footer div a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -78,10 +80,10 @@
     background-color: #D4C2B0;
     color: #2B3D4F;
     text-decoration: none;
-    margin-right: 0.5rem;
+    margin: 0.5rem;
   }
 
-  footer a i {
+  footer div a i {
     font-size: 1.5rem;
   }
 
@@ -92,9 +94,57 @@ footer p + a {
 
   /* 本文のスタイル */
   main {
+    line-height: 1.2;
     max-width: 800px;
     margin: 0 auto;
     padding: 1rem;
+  }
+
+  blockquote {
+    border-left: 0.5rem solid #2B3D4F;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    font-style: italic;
+  }
+
+  blockquote cite {
+    padding: 0.5rem 0;
+    display: block;
+    font-style: italic;
+    font-size: smaller;
+    text-align: right;
+  }
+
+  blockquote cite a:visited {
+    color: #2B3D4F;
+  }
+
+  figure {
+    border: 0.5rem solid #2B3D4F;
+    margin: 1rem 0;
+  }
+
+  figure img {
+    padding: 1rem 1rem 0rem 1rem;
+    width: 100%;
+    height: auto;
+  }
+
+  figure figcaption {
+    color: #2B3D4F;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  figure figcaption cite {
+    display: block;
+    font-style: italic;
+    font-size: smaller;
+    text-align: right;
+  }
+
+  figure figcaption cite a:visited{
+    color: #2B3D4F;
   }
 
   /* レスポンシブデザインのためのスタイル */
