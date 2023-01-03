@@ -2,7 +2,64 @@
 <html>
 <head>
   <title>#2B3D4F</title>
-  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #d4c2b0;
+    }
+    header {
+      background-color: #2B3D4F;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    nav {
+      display: flex;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0 10px;
+    }
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+    }
+    h2 {
+      margin-top: 0;
+      font-size: 1.5em;
+    }
+    footer {
+      background-color: #2B3D4F;
+      color: white;
+      text-align: center;
+      font-size: small;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    @media screen and (max-width: 768px) {
+      header {
+        flex-direction: column;
+      }
+      header h1 {
+        text-align: center;
+      }
+      nav {
+        margin-top: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
