@@ -40,7 +40,7 @@ body {
 
 
 /* ヘッダーのスタイル */
-header {
+.header {
   z-index: 100;
   text-shadow: 0 0 24px var(--color-header-transparent);
   transition: background-color 0.2s;
@@ -54,7 +54,6 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  position: -webkit-fixed;
   position: fixed;
 }
 
@@ -73,20 +72,20 @@ header {
 */
 
 /* サイト名のスタイル */
-header h1 {
+.header h1 {
   margin: 0;
   font-size: 2rem;
 }
 
 /* グローバルナビゲーションのスタイル */
 
-header nav {
+.header nav {
   display: flex;
 }
 
 /* ナビゲーションリンクのスタイル */
 
-header nav a {
+.header nav a {
   display: block;
   padding: 1rem;
   color: var(--color-white);
@@ -94,7 +93,7 @@ header nav a {
 }
 
 /* フッターのスタイル */
-footer {
+#footer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -104,21 +103,21 @@ footer {
 }
 
 /* コピーライトのスタイル */
-footer p {
+#footer p {
   margin: 0;
   font-size: 0.75rem;
 }
 
 /* SNSアイコンのスタイル */
 
-footer div {
+#footer div {
   display: flex;
   align-items: center;
   margin-bottom: 0.5rem;
 }
 
 
-footer div a {
+#footer div a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -131,17 +130,17 @@ footer div a {
   margin: 0.5rem;
 }
 
-footer div a i {
+#footer div a i {
   font-size: 1.5rem;
 }
 
 /* コピーライトとアイコンの間隔のスタイル */
-footer p+a {
+#footer p+a {
   margin-left: 1rem;
 }
 
 /* 本文のスタイル */
-main {
+#main {
   line-height: 1.2;
   max-width: 800px;
   margin: 0 auto;
