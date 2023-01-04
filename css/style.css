@@ -1,199 +1,292 @@
 /* スタイルシート */
 
 :root {
-    --color-primary: #2B3D4F;
-    --color-primary-2: rgba(43, 61, 80, 0.05);
-    --color-secondary: #D4C2B0;
-    --color-white: white;
-  }
+  --color-primary: #2B3D4F;
+  --color-primary-2: rgba(43, 61, 80, 0.1);
+  --color-secondary: #D4C2B0;
+  --color-header: #2B3D4FFF;
+  --color-header-transparent: rgba(43, 61, 79, 0.5);
+  --color-border: rgba(43, 61, 80, 0.2);
+  --color-white: white;
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
     --color-primary: #BFAB98;
-    --color-primary-2: rgba(191, 171, 152, 0.05);
+    --color-primary-2: rgba(191, 171, 152, 0.1);
     --color-secondary: #16222E;
+    --color-border: rgba(191, 171, 152, 0.2);
+    --color-header: #d4c2b0FF;
+    --color-header-transparent: rgba(212, 194, 176, 0.5);
     --color-white: black;
   }
 }
 
 /* 要素全体に適用されるスタイル */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 
-  /* ボディのスタイル */
-  body {
-    font-family: sans-serif;
-    background-color: var(--color-secondary);
-    color: var(--color-primary);
-  }
+/* ボディのスタイル */
+body {
+  padding-top: 90px;
+  font-family: sans-serif;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
 
 
-  /* ヘッダーのスタイル */
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: var(--color-primary);
-    color: var(--color-white);
-  }
+/* ヘッダーのスタイル */
+header {
+  z-index: 100;
+  text-shadow: 0 0 24px var(--color-header-transparent);
+  transition: background-color 0.2s;
+  backdrop-filter: saturate(180%) blur(10px);
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  color: var(--color-white);
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+}
 
-  /* サイト名のスタイル */
-  header h1 {
-    margin: 0;
-    font-size: 2rem;
-  }
+.header-default.top {
+  background-color: var(--color-header);
+}
 
-  /* グローバルナビゲーションのスタイル */
-  header nav {
-    display: flex;
-  }
+.header-default.not-top {
+  background-color: var(--color-header-transparent);
+}
 
-  /* ナビゲーションリンクのスタイル */
-  header nav a {
-    display: block;
-    padding: 1rem;
-    color: var(--color-white);
-    text-decoration: none;
-  }
+/*
+.header-default:hover {
+  background-color: var(--color-header);
+}
+*/
 
-  /* フッターのスタイル */
-  footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    background-color: var(--color-primary);
-    color: var(--color-white);
-  }
+/* サイト名のスタイル */
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
 
-  /* コピーライトのスタイル */
-  footer p {
-    margin: 0;
-    font-size: 0.75rem;
-  }
+/* グローバルナビゲーションのスタイル */
 
-  /* SNSアイコンのスタイル */
+header nav {
+  display: flex;
+}
 
-  footer div {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.5rem;
-  }
+/* ナビゲーションリンクのスタイル */
+
+header nav a {
+  display: block;
+  padding: 1rem;
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+/* フッターのスタイル */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* コピーライトのスタイル */
+footer p {
+  margin: 0;
+  font-size: 0.75rem;
+}
+
+/* SNSアイコンのスタイル */
+
+footer div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
 
 
-  footer div a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    background-color: var(--color-secondary);
-    color: var(--color-primary);
-    text-decoration: none;
-    margin: 0.5rem;
-  }
+footer div a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  text-decoration: none;
+  margin: 0.5rem;
+}
 
-  footer div a i {
-    font-size: 1.5rem;
-  }
+footer div a i {
+  font-size: 1.5rem;
+}
 
-  /* コピーライトとアイコンの間隔のスタイル */
-footer p + a {
-    margin-left: 1rem;
-  }
+/* コピーライトとアイコンの間隔のスタイル */
+footer p+a {
+  margin-left: 1rem;
+}
 
-  /* 本文のスタイル */
+/* 本文のスタイル */
+main {
+  line-height: 1.2;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h2 {
+  color: var(--color-primary);
+  background-color: var(--color-primary-2);
+  font-size: 1.8rem;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+
+hr {
+  margin: 1rem 0.5rem;
+  border-color: var(--color-border);
+  border-width: 2px;
+}
+
+blockquote {
+  /* background-color: var(--color-primary-2); */
+  border-left: 0.5rem solid var(--color-primary);
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  font-style: italic;
+}
+
+blockquote cite {
+  padding: 0.5rem 0;
+  display: block;
+  font-style: italic;
+  font-size: smaller;
+  text-align: right;
+}
+
+blockquote cite a:visited {
+  color: var(--color-primary);
+}
+
+figure {
+  border: 0.5rem solid var(--color-primary);
+  margin: 1rem 0;
+}
+
+/*
+figure img {
+  padding: 1rem 1rem 0rem 1rem;
+  width: 100%;
+  height: auto;
+}
+*/
+
+figure figcaption {
+  color: var(--color-primary);
+  text-align: center;
+  padding: 1rem;
+}
+
+figure figcaption cite {
+  display: block;
+  font-style: italic;
+  font-size: smaller;
+  text-align: right;
+}
+
+figure figcaption cite a:visited {
+  color: var(--color-primary);
+}
+
+/* 画像ポップアップ */
+
+/* figure .image-container {
+  position: relative;
+  display: inline-block;
+}
+*/
+
+.image-container img {
+  padding: 1rem 1rem 0rem 1rem;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.image-container img:hover {
+  transform: scale(1.01);
+  /* box-shadow: 0 0 24px rgba(0, 0, 0, 0.5); */
+}
+
+.overlay {
+  z-index: 200;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.popup {
+  z-index: 200;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  max-height: 90%;
+  overflow: hidden;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
+}
+
+.popup-cite {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 14px;
+  color: white;
+  text-align: right;
+  max-width: 80%;
+}
+
+.popup-cite a:visited {
+  color: white;
+}
+
+/* レスポンシブデザインのためのスタイル */
+@media (max-width: 833px) {
   main {
-    line-height: 1.2;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1rem;
+    width: 95%;
   }
 
-  h2 {
-    color: var(--color-primary);
-    background-color: var(--color-primary-2);
-    font-size: 1.8rem;
+  header nav {
+    flex-direction: column;
+  }
+
+  header nav a {
     padding: 0.5rem;
-    margin: 0.5rem 0;
-    font-weight: bold;
   }
-
-  h3 {
-    font-size: 1.4rem;
-    margin: 0.5rem 0;
-    font-weight: bold;
-  }
-
-  hr {
-    margin: 1rem 0.5rem;
-    border-color: var(--color-primary-2);
-    border-width: 2px;
-  }
-
-  blockquote {
-    background-color: var(--color-primary-2);
-    border-left: 0.5rem solid var(--color-primary);
-    padding: 0.5rem 1rem;
-    margin: 1rem 0;
-    font-style: italic;
-  }
-
-  blockquote cite {
-    padding: 0.5rem 0;
-    display: block;
-    font-style: italic;
-    font-size: smaller;
-    text-align: right;
-  }
-
-  blockquote cite a:visited {
-    color: var(--color-primary);
-  }
-
-  figure {
-    border: 0.5rem solid var(--color-primary);
-    margin: 1rem 0;
-  }
-
-  figure img {
-    padding: 1rem 1rem 0rem 1rem;
-    width: 100%;
-    height: auto;
-  }
-
-  figure figcaption {
-    color: var(--color-primary);
-    text-align: center;
-    padding: 1rem;
-  }
-
-  figure figcaption cite {
-    display: block;
-    font-style: italic;
-    font-size: smaller;
-    text-align: right;
-  }
-
-  figure figcaption cite a:visited{
-    color: var(--color-primary);
-  }
-
-  /* レスポンシブデザインのためのスタイル */
-  @media (max-width: 800px) {
-    main {
-        width: 95%;
-    }
-    header nav {
-      flex-direction: column;
-    }
-    header nav a {
-      padding: 0.5rem;
-    }
-  }
+}
