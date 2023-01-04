@@ -1,6 +1,6 @@
 $(document).ready(function () {
     // 最初はページのトップにいるという前提で、.top クラスを付与する
-    $(".header").addClass("top");
+    $("#header").addClass("top");
 
     $(window).scroll(function () {
         // スクロール量を取得する
@@ -26,7 +26,7 @@ $(document).ready(function () {
         var imageCiteLink = thumbnail.attr("data-image-cite-link");
         var popup = $(`<img src="${fullImage}" alt="${imageAlt}" class="popup">`);
         var popupCite = $(
-          `<div class="popup-cite"><cite><a href="${imageCiteLink}">${imageCite}</a></cite></div>`
+            `<div class="popup-cite"><cite><a href="${imageCiteLink}">${imageCite}</a></cite></div>`
         );
         var overlay = $('<div class="overlay"></div>');
         overlay.append(popup);
@@ -34,15 +34,15 @@ $(document).ready(function () {
         $("body").append(overlay);
         overlay.fadeIn(300);
         popup.css({ transform: "translate(-50%, -50%) scale(1)" });
-      });
+    });
 
-      $(document).on("click", ".overlay", function (e) {
+    $(document).on("click", ".overlay", function (e) {
         e.preventDefault();
         if ($(e.target).hasClass("overlay")) {
-          $(this).fadeOut(300, function () {
-            $(this).remove();
-          });
+            $(this).fadeOut(300, function () {
+                $(this).remove();
+            });
         }
-      });
+    });
 
 });
